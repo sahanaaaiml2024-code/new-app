@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeCampus - Disaster Preparedness System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🏫 SafeCampus</h1>
+                <p>Disaster Preparedness & Emergency Response Training</p>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main class="main-content">
+            <!-- Disaster Selection Section -->
+            <section class="selection-section">
+                <h2>Select a Disaster Scenario</h2>
+                <div class="disaster-buttons">
+                    <button class="disaster-btn" data-disaster="EARTHQUAKE">
+                        <span class="icon">🌍</span>
+                        <span>Earthquake</span>
+                    </button>
+                    <button class="disaster-btn" data-disaster="FIRE">
+                        <span class="icon">🔥</span>
+                        <span>Fire</span>
+                    </button>
+                    <button class="disaster-btn" data-disaster="FLOOD">
+                        <span class="icon">💧</span>
+                        <span>Flood</span>
+                    </button>
+                    <button class="disaster-btn" data-disaster="CYCLONE">
+                        <span class="icon">🌪️</span>
+                        <span>Cyclone</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Response Section -->
+            <section id="responseSection" class="response-section hidden">
+                <div class="response-header">
+                    <button id="backBtn" class="back-btn">← Back</button>
+                    <h2 id="disasterTitle"></h2>
+                </div>
+
+                <!-- Safety Actions -->
+                <div class="card safety-actions-card">
+                    <h3>🚨 Immediate Safety Actions</h3>
+                    <ol id="safetyActionsList" class="actions-list"></ol>
+                </div>
+
+                <!-- Preparedness Checklist -->
+                <div class="card checklist-card">
+                    <h3>✅ Preparedness Checklist</h3>
+                    <div id="checklistContainer" class="checklist-container"></div>
+                    <div class="checklist-score">
+                        <span>Preparedness Score: </span>
+                        <span id="scoreDisplay" class="score-badge">0%</span>
+                    </div>
+                </div>
+
+                <!-- Emergency Contacts -->
+                <div class="card emergency-card">
+                    <h3>📞 Emergency Contacts</h3>
+                    <div id="emergencyContactsList" class="contacts-list"></div>
+                </div>
+
+                <!-- Status Indicator -->
+                <div class="status-section">
+                    <div id="statusIndicator" class="status-badge"></div>
+                </div>
+
+                <!-- JSON Output -->
+                <div class="card json-output-card">
+                    <h3>📋 JSON Schema Output</h3>
+                    <pre id="jsonOutput" class="json-container"></pre>
+                    <button id="copyBtn" class="copy-btn">Copy JSON</button>
+                </div>
+            </section>
+
+            <!-- Welcome Message -->
+            <section id="welcomeSection" class="welcome-section">
+                <div class="welcome-card">
+                    <h2>Welcome to SafeCampus</h2>
+                    <p>Learn how to respond effectively during emergencies. Select a disaster scenario to begin your training.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <span class="feature-icon">📚</span>
+                            <span>Learn response procedures</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✅</span>
+                            <span>Check your preparedness</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📞</span>
+                            <span>Quick emergency contacts</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📱</span>
+                            <span>Mobile-friendly access</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 SafeCampus. Save Lives Through Preparedness. | <a href="#" id="githubLink" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
